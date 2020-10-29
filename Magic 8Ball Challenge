@@ -1,0 +1,22 @@
+#importing random so that I can use choice later on to randomly pick a response
+import random
+#in progress message to user
+print("Welcome to Magic 8Ball!\nIn progress...")
+#set of responses along with User generated input that will respond to the question inputted
+question = input("\nAsk a question: ")
+responses = ["That is not quite certain", "Yes", "Ask again later", "No", "Maybe, maybe not", "It is not in the cards right now", "Try again later", "All sources are pointing to yes", "Too early to tell", "Perhaps, but do not count on it"]
+#randomly selected responses will display to the user when they asked a question
+response = (random.choice(responses))
+print(response)
+
+#Second part where I ask if they want to continue asking the Magic 8ball or if they want to stop
+# Yes or No must be capitalized so this part of the code runs
+#While will cause the code to run forever as long a the user inputs "Yes"
+while input("\nDo you want to continue? Yes or No? ") == "Yes":
+   question = input("Ask a question: ")
+   response = (random.choice(responses))
+   print(response)
+#If the user inputs anything other than "Yes", the Magic 8Ball will display the following message
+else:
+   print("Thank you for using Magic 8ball. Goodbye")
+#End of code
