@@ -1,0 +1,103 @@
+#parent class, in which the child classes will inherit the properties
+ class ​Computer:
+ ​def ​__init__​(​self​, ​name​, ​CPU​, ​GPU​, ​storage​, ​memory):
+  ​self​.CPU = CPU
+ ​self​.GPU = GPU
+ ​self​.storage = storage
+ ​self​.memory = memory
+ #Computer_specs, in which this will set up the format of how the properties
+  ​def ​Computer_specs​(​self​):
+ ​return ​" {}​\n​ {}​\n​ {}​\n​ {}​\n​ {}​\n​"​.format(​self​.name​, ​self​.CPU​, ​self​.GPU​,
+ self​.storage​, ​self​.memory)
+ #MacBook Air class
+ class ​MacBook_Air(Computer):
+ ​def ​__init__​(​self​, ​name​, ​CPU​, ​GPU​, ​storage​, ​memory):
+ Computer.​__init__​(​self​, ​name​, ​CPU​, ​GPU​, ​storage​, ​memory)
+ #MacBook Air types, in which there are 2 that will be displayed with 5 spec
+ properties through print
+ MacBook_Air_1 = Computer(​"MacBook Air $999.00"​, ​"8-core CPU"​, ​"7-core GPU"​,
+ "256 GB"​, ​"8 GB"​)
+ MacBook_Air_2 = Computer(​"MacBook Air $1249.00"​, ​"8-core CPU"​, ​"8-core GPU"​,
+ "512 GB"​, ​"8 GB"​)
+ print​(Computer.Computer_specs(MacBook_Air_1))
+ print​(Computer.Computer_specs(MacBook_Air_2))
+ #Macbook Pro 13 in class
+ class ​MacBook_Pro_13inch(Computer):
+ ​def ​__init__​(​self​, ​name​, ​CPU​, ​GPU​, ​storage​, ​memory ):
+ Computer.​__init__​(​self​, ​name​, ​CPU​, ​GPU​, ​storage​, ​memory)
+ #MacBook Pro 13in types, in which there are 4 that will be displayed with 5
+ spec properties through print
+ MacBook_Pro_13inch_1 = Computer(​"Macbook Pro 13in $1299.00"​, ​"8-core CPU"​,
+ "8-core GPU"​, ​"256 GB"​,​"8 GB"​)
+ MacBook_Pro_13inch_2 = Computer(​"Macbook Pro 13in $1499.00"​, ​"8-core CPU"​,
+ "8-core GPU"​, ​"512 GB"​,​"8 GB"​)
+ MacBook_Pro_13inch_3 = Computer(​"Macbook Pro 13in $1799.00"​, ​"2.0 GHz Intel
+ Core i5 Quad-core Processor"​, ​"Intel Iris Plus Graphics"​, ​"512 GB"​,​"16 GB"​)
+ MacBook_Pro_13inch_4 = Computer(​"Macbook Pro 13in $1999.00"​, ​"2.0 GHz Intel
+ Core i5 Quad-core Processor"​, ​"Intel Iris Plus Graphics"​, ​"1 TB"​,​"16 GB"​)
+ print​(Computer.Computer_specs(MacBook_Pro_13inch_1))
+ print​(Computer.Computer_specs(MacBook_Pro_13inch_2))
+  
+ print​(Computer.Computer_specs(MacBook_Pro_13inch_3))
+ print​(Computer.Computer_specs(MacBook_Pro_13inch_4))
+ #MacBook Pro 16 in class
+ class ​Macbook_Pro_16_inch(Computer):
+ ​def ​__init__​(​self​, ​name​, ​CPU​, ​GPU​, ​storage​, ​memory):
+ Computer.​__init__​(​self​, ​name​, ​CPU​, ​GPU​, ​storage​, ​memory)
+ #MacBook Pro 16in types, in which there are 2 that will be displayed with 5
+ spec properties through print
+ Macbook_Pro_16_inch_1 = Computer(​"Macbook Pro 16in $2399.00"​, ​"2.6GHz 6-Core
+ Processor"​, ​"AMD Radeon Pro 5300M"​, ​"512 GB"​, ​"16 GB"​)
+ Macbook_Pro_16_inch_2 = Computer(​"Macbook Pro 16in $2799.00"​, ​"2.3GHz 8-Core
+ Processor"​, ​"AMD Radeon Pro 5500M"​, ​"1 TB"​, ​"16 GB"​)
+ print​(Computer.Computer_specs(Macbook_Pro_16_inch_1))
+ print​(Computer.Computer_specs(Macbook_Pro_16_inch_2))
+ #iMac class
+ class ​iMac(Computer):
+ ​def ​__init__​(​self​, ​name​, ​CPU​, ​GPU​, ​storage​, ​memory):
+ Computer.​__init__​(​self​, ​name​, ​CPU​, ​GPU​, ​storage​, ​memory)
+ #iMac types, in which there are 6 that will be displayed with 5 spec properties
+ through print
+ iMac1= Computer(​"iMac 21.5in $1,099.00"​, ​"2.3 GHZ Dual-Core Processor"​, ​"Intel
+ Iris Plus Graphics 640"​, ​"256 GB"​, ​"8 GB" ​)
+ iMac2= Computer(​"iMac 21.5in $1,299.00"​, ​"3.6 GHZ Quad-Core Processor"​, ​"Radeon
+ Pro 555X"​, ​"256 GB"​, ​"8 GB" ​)
+ iMac3= Computer(​"iMac 21.5in $1,499.00"​, ​"3.0 GHZ 6-Core Processor"​, ​"Radeon
+ Pro 560X"​, ​"256 GB"​, ​"8 GB" ​)
+ iMac4= Computer(​"iMac 27in $1,799.00"​, ​"3.1 GHZ 6-Core Processor"​, ​"Radeon Pro
+ 5300"​, ​"256 GB"​, ​"8 GB" ​)
+ iMac5= Computer(​"iMac 27in $1,999.00"​, ​"3.3 GHZ 6-Core Processor"​, ​"Radeon Pro
+ 5300"​, ​"512 GB"​, ​"8 GB" ​)
+ iMac6= Computer(​"iMac 27in $2,299.00"​, ​"3.8 GHZ 8-Core Processor"​, ​"Radeon Pro
+ 5300 XT"​, ​"512 GB"​, ​"8 GB" ​)
+ print​(Computer.Computer_specs(iMac1))
+ print​(Computer.Computer_specs(iMac2))
+ print​(Computer.Computer_specs(iMac3))
+ print​(Computer.Computer_specs(iMac4))
+ print​(Computer.Computer_specs(iMac5))
+ print​(Computer.Computer_specs(iMac6))
+ #iMac Pro class
+ class ​iMac_Pro(Computer):
+ ​def ​__init__​(​self​, ​name​, ​CPU​, ​GPU​, ​storage​, ​memory):
+ Computer.​__init__​(​self​, ​name​, ​CPU​, ​GPU​, ​storage​, ​memory)
+  
+ #iMac Pro types, in which there is 1 that will be displayed with 5 spec
+ properties through print
+ iMac_Pro = Computer(​"iMac Pro 27in $4,999.00"​, ​"3.0GHz 10-Core Intel Xeon W
+ processor"​, ​"Radeon Pro Vega 56"​, ​"1 TB"​, ​"32 GB"​)
+ print​(Computer.Computer_specs(iMac_Pro))
+ #Mac mini class
+ class ​Mac_mini(Computer):
+ ​def ​__init__​(​self​, ​name​, ​CPU​, ​GPU​, ​storage​, ​memory):
+ Computer.​__init__​(​self​, ​name​, ​CPU​, ​GPU​, ​storage​, ​memory)
+ #Mac mini types, in which there are 3 that will be displayed with 5 spec
+ properties through print
+ Mac_mini_1 = Computer(​"Mac mini $699.00"​, ​"8-core CPU"​, ​"8-core CPU"​, ​"256 GB"​,
+ "8 GB"​)
+ Mac_mini_2 = Computer(​"Mac mini $899.00"​, ​"8-core CPU"​, ​"8-core GPU"​, ​"512 GB"​,
+ "8 GB"​)
+ Mac_mini_3 = Computer(​"Mac mini $1099.00"​, ​"3.0GHz 6-core Intel Core i5
+ Processor"​, ​"Intel UHD Graphics 630"​, ​"512 GB"​, ​"8 GB"​)
+ print​(Computer.Computer_specs(Mac_mini_1))
+ print​(Computer.Computer_specs(Mac_mini_2))
+ print​(Computer.Computer_specs(Mac_mini_3))
